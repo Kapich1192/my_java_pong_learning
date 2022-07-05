@@ -1,6 +1,6 @@
 package application;
 
-import game_field.GameField;
+import game_elements.GameField;
 
 public class Pong {
     public static void main(String[] args) {
