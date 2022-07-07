@@ -6,6 +6,11 @@ public class Rocket {
     private int rocketX = 5;
     private char marker = '0';
     /*constructors*/
+    public Rocket() {}
+    public Rocket(int rocketY, int rocketX) {
+        this.rocketY = rocketY;
+        this.rocketX = rocketX;
+    }
     /*getters*/
 
     public int getRocketY() {

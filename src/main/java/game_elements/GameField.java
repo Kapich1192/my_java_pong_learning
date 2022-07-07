@@ -5,9 +5,9 @@ public class GameField {
     private char nextStep = 'w';
     private int heigth = 25;
     private int weigth = 80;
-    private char[][] gameField ;
-    private char fields = 'o';
-    private char line = '|';
+    private final char[][] gameField ;
+    private final char fields = 'o';
+    private final char line = '|';
     Rocket rocket1;
     Rocket rocket2;
     Boll boll;
@@ -17,7 +17,7 @@ public class GameField {
     public GameField() {
         gameField = new char[heigth][weigth];
         rocket1 = new Rocket();
-        rocket2 = new Rocket();
+        rocket2 = new Rocket(12,weigth - 4);
         boll = new Boll();
     }
     public GameField(int heigth, int weigth) {
@@ -51,7 +51,10 @@ public class GameField {
                     gameField[i][j] = fields;
                 } else if ((i == rocket1.getRocketY() && j == rocket1.getRocketX()) ||
                         (i == rocket1.getRocketY() - 1 && j == rocket1.getRocketX()) ||
-                        (i == rocket1.getRocketY() + 1 && j == rocket1.getRocketX())) {
+                        (i == rocket1.getRocketY() + 1 && j == rocket1.getRocketX()) ||
+                        (i == rocket2.getRocketY() && j == rocket2.getRocketX()) ||
+                        (i == rocket2.getRocketY() - 1 && j == rocket2.getRocketX()) ||
+                        (i == rocket2.getRocketY() + 1 && j == rocket2.getRocketX())) {
                     gameField[i][j] = rocket1.getMarker();
                 } else if (i == boll.getBollY() && j == boll.getBollX()) {
                     gameField[i][j] = boll.getBoll();
