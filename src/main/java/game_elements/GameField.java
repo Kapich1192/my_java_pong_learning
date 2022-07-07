@@ -44,11 +44,16 @@ public class GameField {
         this.nextStep = nextStep;
     }
     /*system*/
-    void initializeGameField() {
+    public void initializeGameField() {
         for (int i = 0; i < gameField.length; i++) {
-            for (int j = 0; j < gameField.length; j++) {
-                if (i = bo)
-
+            for (int j = 0; j < gameField[i].length; j++) {
+                if (i == 0 || i == heigth - 1 || j == 0 || j == weigth - 1) {
+                   gameField[i][j] = fields;
+                } else if (j == weigth / 2) {
+                    gameField[i][j] = line;
+                } else {
+                    gameField[i][j] = ' ';
+                }
             }
         }
     }
@@ -56,7 +61,7 @@ public class GameField {
     public void printGameField() {
         System.out.println("");
         for (int i = 0; i < gameField.length; i++) {
-            for (int j = 0; j < gameField.length; j++) {
+            for (int j = 0; j < gameField[i].length; j++) {
                 System.out.print(gameField[i][j]);
             }
             System.out.println("");

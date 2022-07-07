@@ -9,7 +9,7 @@ public class Pong {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         GameField gameField = new GameField();
-        gameField.printGameField();
+        gameField.initializeGameField();
         while (gameField.getNextStep() != 'q') {
             GameField.skip();
             gameField.printGameField();
