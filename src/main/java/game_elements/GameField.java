@@ -48,7 +48,13 @@ public class GameField {
         for (int i = 0; i < gameField.length; i++) {
             for (int j = 0; j < gameField[i].length; j++) {
                 if (i == 0 || i == heigth - 1 || j == 0 || j == weigth - 1) {
-                   gameField[i][j] = fields;
+                    gameField[i][j] = fields;
+                } else if ((i == rocket1.getRocketY() && j == rocket1.getRocketX()) ||
+                        (i == rocket1.getRocketY() - 1 && j == rocket1.getRocketX()) ||
+                        (i == rocket1.getRocketY() + 1 && j == rocket1.getRocketX())) {
+                    gameField[i][j] = rocket1.getMarker();
+                } else if (i == boll.getBollY() && j == boll.getBollX()) {
+                    gameField[i][j] = boll.getBoll();
                 } else if (j == weigth / 2) {
                     gameField[i][j] = line;
                 } else {

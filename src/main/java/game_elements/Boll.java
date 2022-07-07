@@ -11,6 +11,27 @@ public class Boll {
     /*constructors*/
     public Boll() {}
     /*getters*/
+    public char getBoll() { return boll; }
+    public int getBollX() {
+        return bollX;
+    }
+
+    public int getBollY() {
+        return bollY;
+    }
+
+    public int getBollVectorX() {
+        return bollVectorX;
+    }
+
+    public int getBollVectorY() {
+        return bollVectorY;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
     /*setters*/
     /*system*/
     public void moveBoll(GameField gameField) {

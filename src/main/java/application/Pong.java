@@ -7,13 +7,21 @@ import java.io.InputStreamReader;
 
 public class Pong {
     public static void main(String[] args) throws IOException {
+        char step;
+        String str;
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         GameField gameField = new GameField();
         gameField.initializeGameField();
         while (gameField.getNextStep() != 'q') {
             GameField.skip();
             gameField.printGameField();
-            gameField.setNextStep(reader.readLine().charAt(0));
+
+            str = reader.readLine();
+            if (str.length() != 0)
+                step = str.charAt(0);
+            else
+                step = 'w';
+            gameField.setNextStep(step);
         }
         System.out.println("Good bye my friend!))");
     }
