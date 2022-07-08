@@ -12,18 +12,9 @@ public class Rocket {
         this.rocketX = rocketX;
     }
     /*getters*/
-
-    public int getRocketY() {
-        return rocketY;
-    }
-
-    public int getRocketX() {
-        return rocketX;
-    }
-
-    public char getMarker() {
-        return marker;
-    }
+    public int getRocketY() { return rocketY; }
+    public int getRocketX() { return rocketX; }
+    public char getMarker() { return marker; }
     /*setters*/
     /*methods*/
     public void moveRocket(char nextStep, int height) {

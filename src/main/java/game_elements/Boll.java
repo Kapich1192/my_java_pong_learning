@@ -12,28 +12,14 @@ public class Boll {
     public Boll() {}
     /*getters*/
     public char getBoll() { return boll; }
-    public int getBollX() {
-        return bollX;
-    }
-
-    public int getBollY() {
-        return bollY;
-    }
-
-    public int getBollVectorX() {
-        return bollVectorX;
-    }
-
-    public int getBollVectorY() {
-        return bollVectorY;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
-
+    public int getBollX() { return bollX; }
+    public int getBollY() { return bollY; }
+    public int getBollVectorX() { return bollVectorX; }
+    public int getBollVectorY() { return bollVectorY; }
+    public int getSpeed() { return speed; }
     /*setters*/
     /*system*/
+    /*methods*/
     public void moveBoll(int heigth, int weigth, Rocket rocket1, Rocket rocket2) {
         if (bollY + 2 == heigth || bollY - 1 == 0){
             bollVectorY *= -1;
@@ -54,6 +40,5 @@ public class Boll {
         bollY = bollY + bollVectorY;
 
     }
-    /*methods*/
     /*static methods*/
 }
