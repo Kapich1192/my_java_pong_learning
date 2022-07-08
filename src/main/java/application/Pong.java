@@ -14,6 +14,7 @@ public class Pong {
         gameField.initializeGameField();
         while (gameField.getNextStep() != 'q') {
             GameField.skip();
+            GameField.printInfo();
             gameField.printGameField();
 
             str = reader.readLine();

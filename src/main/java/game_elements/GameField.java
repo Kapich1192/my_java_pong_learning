@@ -19,6 +19,8 @@ public class GameField {
         rocket1 = new Rocket();
         rocket2 = new Rocket(12,weigth - 4);
         boll = new Boll();
+        player1 = new Player("Player1");
+        player2 = new Player("Player2");
     }
     public GameField(int heigth, int weigth) {
         this.heigth = heigth;
@@ -27,6 +29,8 @@ public class GameField {
         rocket1 = new Rocket();
         rocket2 = new Rocket();
         boll = new Boll();
+        player1 = new Player("Player1");
+        player2 = new Player("Player2");
     }
     /*getters*/
     public char getNextStep() {return nextStep;}
@@ -80,6 +84,11 @@ public class GameField {
             }
             System.out.println("");
         }
+        System.out.println("Player1 points: " + player1.getPoint() + "; " +
+                "Player2 points: " + player2.getPoint());
+    }
+    public static void printInfo() {
+        System.out.print("Press 'q' for exit, 'a''z' for move rocket1 and 'k''m' for rocket2");
     }
     public static void skip() {
         System.out.println("\\e[1;1H\\e[2J");
