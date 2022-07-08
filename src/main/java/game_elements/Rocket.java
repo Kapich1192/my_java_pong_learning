@@ -26,4 +26,12 @@ public class Rocket {
     }
     /*setters*/
     /*methods*/
+    public void moveRocket(char nextStep, int height) {
+        if ((nextStep == 'a' || nextStep == 'k') && rocketY >= 3) {
+            rocketY = rocketY - 1;
+        }
+        if ((nextStep == 'z' || nextStep == 'm') && rocketY <= height - 4) {
+            rocketY = rocketY + 1;
+        }
+    }
 }

@@ -22,6 +22,7 @@ public class Pong {
             else
                 step = 'w';
             gameField.setNextStep(step);
+            gameField.initializeGameField();
         }
         System.out.println("Good bye my friend!))");
     }

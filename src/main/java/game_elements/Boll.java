@@ -34,7 +34,7 @@ public class Boll {
 
     /*setters*/
     /*system*/
-    public void moveBoll(GameField gameField) {
+    public void moveBoll(int heigth, int weigth, Rocket rocket1, Rocket rocket2) {
 
     }
     /*methods*/

@@ -42,6 +42,11 @@ public class GameField {
     /*setters*/
     public void setNextStep(char nextStep) {
         this.nextStep = nextStep;
+        boll.moveBoll(heigth, weigth, rocket1, rocket2);
+        if (nextStep == 'a' || nextStep == 'z')
+            rocket1.moveRocket(nextStep, heigth);
+        if (nextStep == 'm' ||  nextStep == 'k')
+            rocket2.moveRocket(nextStep, heigth);
     }
     /*system*/
     public void initializeGameField() {
